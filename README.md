@@ -6,7 +6,7 @@ It's being replicated by a team of 4 students from UPC CITM in Barcelona (Tech T
 
 ## Installation
 
-Simply download a release, unzip the file and execute the .exe. 
+Simply download a release, unzip the file and execute the Commando_v.X.exe.
 
 ## Usage
 
@@ -23,9 +23,9 @@ Simply download a release, unzip the file and execute the .exe.
 
 ## History
 
-- Added the different maps, welcome screen and top score screen. 
-- Added music for the different levels (WIP).
-- Quit the game by hitting Escape. 
+- Added the different maps, welcome screen and top score screen with a fade to black effect.
+- Added music for the different levels.
+- Quit the game by hitting Escape.
 
 ## Credits
 
