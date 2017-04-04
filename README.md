@@ -10,8 +10,11 @@ Simply download a release, unzip the file and execute the Commando_v.X.exe.
 
 ## Usage
 
-- Move the background using the arrow keys.
-- Quit hitting Escape. 
+- Move the player using the arrow keys (Up/Down, Right/Left and Diagonals).
+- Skip main menu pressing Space. 
+- Switch scenes pressing C.
+- On a map shoot pressing Space. 
+- Quit hitting Escape.
 
 ## Contributing
 
@@ -25,6 +28,9 @@ Simply download a release, unzip the file and execute the Commando_v.X.exe.
 
 - Added the different maps, welcome screen and top score screen with a fade to black effect.
 - Added music for the different levels.
+- Added Up/Down, Right/Left movement animations. 
+- Added player with Up/Down, Right/Left and Diagonal movement. 
+- Added shooting mechanic.
 - Quit the game by hitting Escape.
 
 ## Credits
