@@ -128,11 +128,16 @@ bool ModuleSecondScene::Start()
 	App->collision->AddCollider({ 78 - 16,674 - 1900 + 248,2,14 }, COLLIDER_WALL);
 
 	//LAKE
-	App->collision->AddCollider({ 0 - 16,493 - 1900 + 248,22,86 }, COLLIDER_LAKE);
+	App->collision->AddCollider({ 1 - 16,493 - 1900 + 248,22,86 }, COLLIDER_LAKE);
+	App->collision->AddCollider({ 1 - 16,493 - 1900 + 248,22,82 }, COLLIDER_WALL);
 	App->collision->AddCollider({ 24 - 16,486 - 1900 + 248,40,85 }, COLLIDER_LAKE);
+	App->collision->AddCollider({ 24 - 16,486 - 1900 + 248,40,81 }, COLLIDER_WALL);
 	App->collision->AddCollider({ 160 - 16,485 - 1900 + 248,17,94 }, COLLIDER_LAKE);
+	App->collision->AddCollider({ 160 - 16,485 - 1900 + 248,17,90 }, COLLIDER_WALL);
 	App->collision->AddCollider({ 176 - 16,490 - 1900 + 248,52,84 }, COLLIDER_LAKE);
+	App->collision->AddCollider({ 176 - 16,490 - 1900 + 248,52,80 }, COLLIDER_WALL);
 	App->collision->AddCollider({ 228 - 16,494 - 1900 + 248,28,83 }, COLLIDER_LAKE);
+	App->collision->AddCollider({ 228 - 16,494 - 1900 + 248,28,79 }, COLLIDER_WALL);
 
 	//ENEMY
 	addStaticEnemies();
