@@ -219,7 +219,7 @@
 		  App->particles->enemy_bullet.speed.y = sin(shoot_direction) * ENEMY_BULLET_SPEED;
 		  App->particles->enemy_bullet.speed.x = cos(shoot_direction) * ENEMY_BULLET_SPEED;
 
-		  if (shot_current_delay < 70)
+		  if (shot_current_delay < 170)
 			  shot_current_delay++;
 		  else {
 			  App->particles->AddParticle(App->particles->enemy_bullet, position.x + 3, position.y + 8, COLLIDER_BULLET_BEHIND_COVER);

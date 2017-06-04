@@ -331,7 +331,7 @@ void BarricadeTrooper::shoot()
 
 	//App->particles->AddParticle(App->particles->enemy_bullet, position.x + 11, position.y + 22, COLLIDER_ENEMY_SHOT);
 
-	if (shot_current_delay < ENEMY_SHOT_DELAY)
+	if (shot_current_delay < 170)
 		shot_current_delay++;
 	else {
 		if (behaviour != TURRET && behaviour != HOLD_POSITION) {
