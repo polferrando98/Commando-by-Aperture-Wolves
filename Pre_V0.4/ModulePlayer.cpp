@@ -383,20 +383,20 @@ update_status ModulePlayer::Update()
 						App->render->camera.x = 0;
 						App->render->camera.y = (1100/3);
 					}
-					else if (position.y<1085 - 1900 + 248 && position.y> 632-1900+248)
+					else if (position.y<1085 - 1900 + 248 && position.y> 350 -1900+248)
 					{
 						position.x = 100;
 						position.y = 1085 - 1900 + 248;
 						App->render->camera.x = 0;
 						App->render->camera.y = (2200/3);
 					}
-					else if (position.y < 632 - 1900 + 248 && position.y>350-1900+248)
+					/*else if (position.y < 632 - 1900 + 248 && position.y>350-1900+248)
 					{
 						position.x = 100;
 						position.y = 632 - 1900 + 248;
 						App->render->camera.x = 0;
 						App->render->camera.y = (3600/3);
-					}
+					}*/
 					else
 					{
 						position.x = 100;
