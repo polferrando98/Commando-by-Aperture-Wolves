@@ -186,7 +186,6 @@ bool ModuleFirstScene::Start()
 
 	//make the player alive
 	App->player->alive = true;
-	
 
 	return true;
 }
