@@ -243,6 +243,7 @@ update_status ModuleSecondScene::Update()
 	if ((App->player->position.y <= (-1900 + 240) || App->player_2->position.y <= (-1900 + 240)) && fading == false)
 	{
 		enteredBossArea = false;
+		finished = false;
 		App->fade->FadeToBlack(this, App->end_scene, 2.0f);
 		fading = true;
 	}

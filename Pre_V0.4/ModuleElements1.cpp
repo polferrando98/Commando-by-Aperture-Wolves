@@ -150,8 +150,8 @@ bool ModuleElements1::Start()
 		heliPos = 1853;
 		timer = 0;
 		num_grenades = 6;
-		superJoePosY = 1781;
-		superJoePosX = 143;
+		superJoePosY = 1759;
+		superJoePosX = 147;
 	
 	return true;
 }
@@ -188,13 +188,13 @@ update_status ModuleElements1::Update()
 	if (App->first_scene->IsEnabled() == true)
 	{
 
-		App->render->Blit(textures, 128, -63 + SCREEN_HEIGHT, &(palm_trees.GetCurrentFrame()), 0.75f);
-		App->render->Blit(textures, 138, -47 + SCREEN_HEIGHT, &(palm_trees.GetCurrentFrame()), 0.75f);
-		App->render->Blit(textures, 112, -47 + SCREEN_HEIGHT, &(palm_trees.GetCurrentFrame()), 0.75f);
+		App->render->Blit(textures, 128, -63 + SCREEN_HEIGHT, &palmTree, 0.75f);
+		App->render->Blit(textures, 138, -47 + SCREEN_HEIGHT, &palmTree, 0.75f);
+		App->render->Blit(textures, 112, -47 + SCREEN_HEIGHT, &palmTree, 0.75f);
 
-		App->render->Blit(textures, 65, 0 + NULL, &(palm_trees.GetCurrentFrame()), 0.75f);
-		App->render->Blit(textures, 1, -128 + SCREEN_HEIGHT, &(palm_trees.GetCurrentFrame()), 0.75f);
-		App->render->Blit(textures, 185, -128 + SCREEN_HEIGHT, &(palm_trees.GetCurrentFrame()), 0.75f);
+		App->render->Blit(textures, 65, 0 + NULL, &palmTree, 0.75f);
+		App->render->Blit(textures, 1, -128 + SCREEN_HEIGHT, &palmTree, 0.75f);
+		App->render->Blit(textures, 185, -128 + SCREEN_HEIGHT, &palmTree, 0.75f);
 
 		//doors
 
@@ -317,41 +317,39 @@ update_status ModuleElements1::Update()
 		//SUPER JOE JUMP
 
 		if (timer > 70 && timer < 120) {
-			if (superJoePosY > 1768 && superJoePosX < 156) {
+			if (superJoePosY > 1700 && superJoePosX < 156) {
 				if (timer % 2 == 0) {
 					superJoePosX++;
 					superJoePosY--;
 				}
-				App->render->Blit(textures, superJoePosX - 16, superJoePosY - 1908 + SCREEN_HEIGHT, &(superJoeJump.GetCurrentFrame()), NULL);
-
+				App->render->Blit(textures, superJoePosX - 30, superJoePosY - 1908 + SCREEN_HEIGHT, &(superJoeJump.GetCurrentFrame()), NULL);
 			}
 			if (superJoePosX < 167 && superJoePosX >= 156 ){
 				if (timer % 2 == 0) {
 					++superJoePosY;
 					++superJoePosX;
 				}
-				App->render->Blit(textures, superJoePosX - 16, superJoePosY - 1908 + SCREEN_HEIGHT, &(superJoeJump.GetCurrentFrame()), NULL);
+				App->render->Blit(textures, superJoePosX - 30, superJoePosY - 1908 + SCREEN_HEIGHT, &(superJoeJump.GetCurrentFrame()), NULL);
 			}
-
 		}
 
 
 		if (superJoePosX >= 167 && timer < 200) {
-			App->render->Blit(textures, superJoePosX - 16, superJoePosY - 1908 + SCREEN_HEIGHT, &(superJoeBye.GetCurrentFrame()), NULL);
+			App->render->Blit(textures, superJoePosX - 30, superJoePosY - 1908 + SCREEN_HEIGHT, &(superJoeBye.GetCurrentFrame()), NULL);
 			++timer;
 		}
-		else if (timer > 200 && superJoePosX >= 115 && superJoePosY >= 150) {
-			App->render->Blit(textures, superJoePosX - 16, superJoePosY - 1908 + SCREEN_HEIGHT, &(App->player->up.GetCurrentFrame()), NULL);
+		else if (timer > 200 && superJoePosX >= 132 && superJoePosY >= 150) {
+			App->render->Blit(textures, superJoePosX - 30, superJoePosY - 1908 + SCREEN_HEIGHT, &(App->player->up.GetCurrentFrame()), NULL);
 			++superJoePosY;
 			--superJoePosX;
 		}
-		else if (timer > 200 && timer < 230) {
-			App->render->Blit(textures, superJoePosX - 16, superJoePosY - 1908 + SCREEN_HEIGHT, &(App->player->up.GetCurrentFrame()), NULL);
-			--superJoePosY;
+		else if (timer > 200 && timer < 210) {
+			App->render->Blit(textures, superJoePosX - 30, superJoePosY - 1908 + SCREEN_HEIGHT, &(App->player->up.GetCurrentFrame()), NULL);
+			++superJoePosY;
 			++timer;
 		}
 		else if (timer > 200) {
-			App->render->Blit(textures, superJoePosX - 16, superJoePosY - 1908 + SCREEN_HEIGHT, &(App->player->up.GetCurrentFrame()), NULL);
+			App->render->Blit(textures, superJoePosX - 30, superJoePosY - 1908 + SCREEN_HEIGHT, &(App->player->up.GetCurrentFrame()), NULL);
 		}
 		
 	}

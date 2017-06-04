@@ -319,7 +319,7 @@ update_status ModulePlayer2::Update()
 	App->particles->bullet.speed.x = cos(direction) * BULLET_SPEED;
 	shot();
 
-	if (App->input->keyboard[SDL_SCANCODE_Z] == KEY_STATE::KEY_DOWN ||
+	if (App->input->keyboard[SDL_SCANCODE_SPACE] == KEY_STATE::KEY_DOWN ||
 		App->input->P2_controll[4] == KEY_STATE::KEY_REPEAT)
 	{   //Mes maco que lo de dalt no? (lo de dalt es pot borrar ja que ja no funciona )
 		shooting = true;
@@ -415,7 +415,7 @@ update_status ModulePlayer2::Update()
 
 	// Grenade
 
-	if (App->input->keyboard[SDL_SCANCODE_X] == KEY_STATE::KEY_DOWN ||
+	if (App->input->keyboard[SDL_SCANCODE_B] == KEY_STATE::KEY_DOWN ||
 		App->input->P2_controll[5] == KEY_STATE::KEY_DOWN) {   //Mes maco que lo de dalt no? (lo de dalt es pot borrar ja que ja no funciona )
 		if (App->elements1->num_grenades > 0) {
 			current_animation = &grenadeThrow;
