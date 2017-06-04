@@ -182,6 +182,7 @@
 				  animation = &behindCoverRight;
 			  }
 		  }
+		  
 		  shoot();
 		  break;
 	  case Enemy::WATER_HIDDEN:
@@ -213,14 +214,17 @@
   }
   void HoleTrooper::shoot(){
 	  shoot_direction = aim_to_player();
-	  App->particles->enemy_bullet.speed.y = sin(shoot_direction) * ENEMY_BULLET_SPEED;
-	  App->particles->enemy_bullet.speed.x = cos(shoot_direction) * ENEMY_BULLET_SPEED;
 
-	  if (shot_current_delay < 70)
-		  shot_current_delay++;
-	  else {
-		  App->particles->AddParticle(App->particles->enemy_bullet, position.x +3, position.y +8, COLLIDER_BULLET_BEHIND_COVER);
-		  shot_current_delay = 0;
+	  if (shoot_direction < 3 && shoot_direction > 0) {
+		  App->particles->enemy_bullet.speed.y = sin(shoot_direction) * ENEMY_BULLET_SPEED;
+		  App->particles->enemy_bullet.speed.x = cos(shoot_direction) * ENEMY_BULLET_SPEED;
+
+		  if (shot_current_delay < 70)
+			  shot_current_delay++;
+		  else {
+			  App->particles->AddParticle(App->particles->enemy_bullet, position.x + 3, position.y + 8, COLLIDER_BULLET_BEHIND_COVER);
+			  shot_current_delay = 0;
+		  }
 	  }
 
   }

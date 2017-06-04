@@ -184,7 +184,7 @@ bool ModuleFirstScene::Start()
 	App->enemies->AddEnemy(ENEMY_TYPES::BARRICADE_TROOPER, 10, -1244, Enemy::TURRET);
 	App->enemies->AddEnemy(ENEMY_TYPES::BARRICADE_TROOPER, 117, -1339, Enemy::TURRET);
 
-
+	App->enemies->AddEnemy(ENEMY_TYPES::HOLE_TROOPER, 50, 80, Enemy::HOLD_POSITION);
 
 	//make the player alive
 	App->player->alive = true;
