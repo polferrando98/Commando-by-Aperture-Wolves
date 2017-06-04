@@ -457,6 +457,8 @@ update_status ModulePlayer::Update()
 					App->enemies->AddEnemy(ENEMY_TYPES::BARRICADE_TROOPER, 167, -1211, Enemy::TURRET);
 					App->enemies->AddEnemy(ENEMY_TYPES::BARRICADE_TROOPER, 10, -1244, Enemy::TURRET);
 					App->enemies->AddEnemy(ENEMY_TYPES::BARRICADE_TROOPER, 117, -1339, Enemy::TURRET);
+
+
 				}
 				else if (App->scene_map2->IsEnabled()) {
 					App->scene_map2->addStaticEnemies();
@@ -688,6 +690,10 @@ void ModulePlayer::OnCollision(Collider* c1, Collider* c2) {
 			alive = false;
 			App->elements1->num_lives_play_1--;
 			anim = true;
+			App->first_scene->enteredBossArea = false;
+			App->first_scene->boss_enemies_current_spawned = 0;
+			App->scene_map2->enteredBossArea = false;
+			App->scene_map2->boss_enemies_current_spawned = 0;
 		}
 	}
 	if (c2->type == COLLIDER_BULLET_BEHIND_COVER && god == false)
@@ -696,6 +702,10 @@ void ModulePlayer::OnCollision(Collider* c1, Collider* c2) {
 			alive = false;
 			App->elements1->num_lives_play_1--;
 			anim = true;
+			App->first_scene->enteredBossArea = false;
+			App->first_scene->boss_enemies_current_spawned = 0;
+			App->scene_map2->enteredBossArea = false;
+			App->scene_map2->boss_enemies_current_spawned = 0;
 		}
 	}
 	if (c2->type == COLLIDER_ENEMY && god == false)
@@ -704,6 +714,10 @@ void ModulePlayer::OnCollision(Collider* c1, Collider* c2) {
 			alive = false;
 			App->elements1->num_lives_play_1--;
 			anim = true;
+			App->first_scene->enteredBossArea = false;
+			App->first_scene->boss_enemies_current_spawned = 0;
+			App->scene_map2->enteredBossArea = false;
+			App->scene_map2->boss_enemies_current_spawned = 0;
 		}
 	}
 	if (c2->type == COLLIDER_GRENADE_BOX)
